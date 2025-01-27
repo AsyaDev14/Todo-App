@@ -45,7 +45,7 @@ export const App: React.FC = () => {
 
   const allTodosCompleted = useMemo(
     () => todoList.length === todosCompletedNum,
-    [todoList],
+    [todosCompletedNum, todoList.length],
   );
 
   const handleAddTodo = async (todoTitle: string) => {
